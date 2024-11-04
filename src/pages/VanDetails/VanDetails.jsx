@@ -11,11 +11,18 @@ export const VanDetails = () => {
     return <Loader />
   }
 
-  console.log(van)
-
   return (
-    <section className="van-list-container">
-      <h1>VanDetails</h1>
+    <section className="van-detail-container">
+      {van ?
+        <div className="van-detail">
+          <img src={van.imageUrl} />
+          <i className={`van-type ${van.type} selected`}>{van.type}</i>
+          <h2>{van.name}</h2>
+          <p className="van-price"><span>${van.price}</span>/day</p>
+          <p>{van.description}</p>
+          <button className="link-button">Rent this van</button>
+        </div> : <h2>Van not found...<br /> Sorry...</h2>}
+
     </section>
   )
 }

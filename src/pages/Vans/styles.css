@@ -1,5 +1,6 @@
 .van-list-container {
-    padding-inline: 23px
+    padding-inline: 24px;
+    padding-bottom: 24px;
 }
 
 .van-list {
