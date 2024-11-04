@@ -1,6 +1,6 @@
 
 import Home from "./Home";
-import About from "./about";
+import About from "./About";
 
 export {
   Home,
