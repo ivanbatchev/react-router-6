@@ -31,7 +31,7 @@
   margin-bottom: 10px;
 }
 
-.van-detail>i {
+.van-detail > i {
   align-self: flex-start;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .van-detail .link-button {
-  background-color: #FF8C38;
+  background-color: #ff8c38;
   color: white;
   font-size: 1.125rem;
 }
