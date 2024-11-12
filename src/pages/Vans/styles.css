@@ -1,12 +1,12 @@
 .van-list-container {
-    padding-inline: 24px;
-    padding-bottom: 24px;
+  padding-inline: 24px;
+  padding-bottom: 24px;
 }
 
 .van-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    gap: 34px;
-    margin-top: 57px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 34px;
+  margin-top: 57px;
 }

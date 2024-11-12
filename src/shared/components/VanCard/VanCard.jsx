@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { memo } from "react"
+import { Link } from 'react-router-dom'
+import { memo } from 'react'
 import './styles.css'
 
 export const VanCard = memo(({ van }) => {
@@ -9,7 +9,10 @@ export const VanCard = memo(({ van }) => {
         <img src={van.imageUrl} />
         <div className="van-info">
           <h3>{van.name}</h3>
-          <p>${van.price}<span>/day</span></p>
+          <p>
+            ${van.price}
+            <span>/day</span>
+          </p>
         </div>
         <i className={`van-type ${van.type} selected`}>{van.type}</i>
       </Link>
