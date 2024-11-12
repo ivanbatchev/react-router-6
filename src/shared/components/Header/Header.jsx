@@ -8,8 +8,9 @@ export const Header = () => {
         #VanLife
       </Link>
       <nav>
-        <Link to="/vans">Vans</Link>
+        <Link to="/host">Host</Link>
         <Link to="/about">About</Link>
+        <Link to="/vans">Vans</Link>
       </nav>
     </header>
   )
