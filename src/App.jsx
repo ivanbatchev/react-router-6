@@ -6,16 +6,21 @@ import {
   VanDetails,
   Dashboard,
   Income,
-  Reviews
+  Reviews,
+  HostVans,
+  HostVansDetails,
+  HostVanInfo,
+  HostVanPhoto,
+  HostVanPricing
 } from './pages'
-import { HeaderLayout, HostLayout } from './shared/layouts'
+import { MainLayout, HostLayout } from './shared/layouts'
 import './App.css'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HeaderLayout />}>
+        <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           {/* VANS related pages */}
@@ -28,6 +33,15 @@ const App = () => {
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
             <Route path="reviews" element={<Reviews />} />
+            {/* VANs nested in host/* */}
+            <Route path="vans">
+              <Route index element={<HostVans />} />
+              <Route path=":id" element={<HostVansDetails />}>
+                <Route path="info" element={<HostVanInfo />} />
+                <Route path="pricing" element={<HostVanPricing />} />
+                <Route path="photos" element={<HostVanPhoto />} />
+              </Route>
+            </Route>
           </Route>
           {/* ================================================= */}
         </Route>

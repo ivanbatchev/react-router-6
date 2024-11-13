@@ -1,4 +1,4 @@
-import HeaderLayout from './HeaderLayout'
+import MainLayout from './MainLayout'
 import HostLayout from './HostLayout'
 
-export { HeaderLayout, HostLayout }
+export { MainLayout, HostLayout }
