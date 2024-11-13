@@ -12,8 +12,8 @@ import {
   HostVanInfo,
   HostVanPhoto,
   HostVanPricing
-} from './pages'
-import { MainLayout, HostLayout } from './shared/layouts'
+} from '../pages'
+import { MainLayout, HostLayout } from '../shared/layouts'
 import './App.css'
 
 const App = () => {

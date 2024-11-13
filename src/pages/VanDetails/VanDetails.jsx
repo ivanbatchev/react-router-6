@@ -1,5 +1,5 @@
 import { useVans } from '../../shared/lib/hooks'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { Loader } from '../../shared/components'
 import './styles.css'
 
@@ -13,6 +13,9 @@ export const VanDetails = () => {
 
   return (
     <section className="van-detail-container">
+      <Link to=".." relative="path" className="back-button">
+        &larr; <span>Back to all vans</span>
+      </Link>
       {van ? (
         <div className="van-detail">
           <img src={van.imageUrl} />
