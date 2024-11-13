@@ -1,11 +1,14 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, Outlet, NavLink } from 'react-router-dom'
 import { Loader } from '../../../shared/components'
 import { useVans } from '../../../shared/lib/hooks'
+import { activeStyles } from '../../../shared/lib/constants'
 import './styles.css'
 
 export const HostVansDetails = () => {
   const { id } = useParams()
   const { loading, data: currentVan } = useVans(id, true)
+
+  const handleNavLinkChosen = ({ isActive }) => (isActive ? activeStyles : null)
 
   if (loading) {
     return <Loader />
@@ -13,7 +16,7 @@ export const HostVansDetails = () => {
 
   return (
     <section>
-      <Link to=".." className="back-button">
+      <Link to=".." relative="path" className="back-button">
         &larr; <span>Back to all vans</span>
       </Link>
 
@@ -28,6 +31,20 @@ export const HostVansDetails = () => {
             <h4>${currentVan.price}/day</h4>
           </div>
         </div>
+        <nav className="host-van-detail-nav">
+          <NavLink to="." end style={handleNavLinkChosen}>
+            Details
+          </NavLink>
+
+          <NavLink to="pricing" style={handleNavLinkChosen}>
+            Pricing
+          </NavLink>
+
+          <NavLink to="photos" style={handleNavLinkChosen}>
+            Photos
+          </NavLink>
+        </nav>
+        <Outlet context={{ currentVan }} />
       </div>
     </section>
   )
