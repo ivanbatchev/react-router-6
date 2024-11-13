@@ -1,13 +1,8 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import { activeStyles } from '../../lib/constants'
 import './styles.css'
 
 export const HostLayout = () => {
-  const activeStyles = {
-    fontWeight: 'bold',
-    textDecoration: 'underline',
-    color: '#161616'
-  }
-
   const handleNavLinkChosen = ({ isActive }) => (isActive ? activeStyles : null)
 
   return (
