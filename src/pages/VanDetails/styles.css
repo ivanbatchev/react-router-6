@@ -50,3 +50,15 @@
   color: white;
   font-size: 1.125rem;
 }
+
+.back-button {
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin-top: 16px;
+  margin-left: 26px;
+}
+
+.back-button span:hover {
+  text-decoration: underline;
+}
